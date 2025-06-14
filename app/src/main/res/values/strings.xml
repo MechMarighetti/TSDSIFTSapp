@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tecnicatura en Desarrollo de Software</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">IFTS TSDS</string>
+    <string name="nav_header_subtitle">Desarrollo de Aplicaciones Móviles</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Galería</string>
+    <string name="menu_slideshow">Diapositivas</string>
+
+</resources>
