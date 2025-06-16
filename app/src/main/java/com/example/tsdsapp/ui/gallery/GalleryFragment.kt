@@ -22,6 +22,7 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val galleryViewModel =
             ViewModelProvider(this).get(GalleryViewModel::class.java)
 
@@ -34,6 +35,12 @@ class GalleryFragment : Fragment() {
         }
         return root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

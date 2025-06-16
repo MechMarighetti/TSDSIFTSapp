@@ -8,8 +8,10 @@
     <string name="action_settings">Configuración</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_gallery">calificaciones</string>
-    <string name="menu_slideshow">asitencia</string>
-    <string name="acercade">"acerca de "</string>
+    <string name="menu_gallery">Calificaciones</string>
+    <string name="menu_slideshow">Asistencia</string>
+    <string name="acercade">"Acerca de"</string>
+    <string name="about_descripcion">App desarrollada por alumnos del IFTS para la asignatura Desarrollo de Aplicaciones Móviles. Buenos Aires 2025</string>
+    <string name="menu_login">Inicio de sesión</string>
 
 </resources>
