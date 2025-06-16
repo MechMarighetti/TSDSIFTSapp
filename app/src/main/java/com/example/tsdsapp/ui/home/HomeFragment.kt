@@ -48,8 +48,8 @@ class HomeFragment : Fragment() {
         val dni = sharedPreferences.getString("dni_usuario", "DNI no disponible")
 
         // Mostrar en los TextView
-        binding.tvNombre.text = "Bienvenido: $nombre"
-        binding.tvDNI.text = "Tu DNI: $dni"
+        binding.tvNombre.text = "Alumno: $nombre"
+        binding.tvDNI.text = "DNI: $dni"
     }
 
 

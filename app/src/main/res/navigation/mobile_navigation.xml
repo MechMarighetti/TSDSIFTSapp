@@ -22,4 +22,14 @@
         android:name="com.example.tsdsapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/menu_logout"
+        android:name="com.example.tsdsapp.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.tsdsapp.LoginActivity"
+        android:label="LoginActivity" />
 </navigation>
