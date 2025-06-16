@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Tecnicatura en Desarrollo de Software</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,7 +8,8 @@
     <string name="action_settings">Configuración</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_gallery">Galería</string>
-    <string name="menu_slideshow">Diapositivas</string>
+    <string name="menu_gallery">calificaciones</string>
+    <string name="menu_slideshow">asitencia</string>
+    <string name="acercade">"acerca de "</string>
 
 </resources>
