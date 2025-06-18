@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    tools:showIn="navigation_view"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="inicio" />
+            android:icon="@drawable/school_solid"
+            android:title="Inicio" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="calificaciones" />
+            android:icon="@drawable/graduation_cap_solid"
+            android:title="Calificaciones" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/clipboard_user_solid"
             android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_login"
-            android:icon="@drawable/baseline_10mp_24"
-            android:title="@string/menu_slideshow" />
-
         <item
             android:id="@+id/menu_logout"
-            android:icon="@drawable/baseline_10mp_24"
+            android:icon="@drawable/right_from_bracket_solid"
             android:title="@string/menu_logout" />
 
     </group>
