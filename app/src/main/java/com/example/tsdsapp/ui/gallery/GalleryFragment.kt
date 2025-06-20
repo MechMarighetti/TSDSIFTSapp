@@ -7,6 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.tsdsapp.R
+import com.example.tsdsapp.data.MateriaAdapter
+import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentGalleryBinding
 
 class GalleryFragment : Fragment() {
@@ -18,22 +23,16 @@ class GalleryFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_gallery, container, false)
 
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerNotas)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = MateriaAdapter(MateriasAlumno.generarMockData())
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textCalificaciones
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
