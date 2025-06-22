@@ -13,10 +13,12 @@
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="sjdfsddsnjsdf"/>
 
     <TextView
         android:id="@+id/tvAsistencia"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="lsdfjsafiojafijoa"/>
 </LinearLayout>
