@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
+        android:id="@+id/nav_calificaciones"
+        android:name="com.example.tsdsapp.ui.gallery.GalleryFragment"
+        android:label="calificaciones"
+        tools:layout="@layout/fragment_calificaciones" />
+
+    <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.tsdsapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
