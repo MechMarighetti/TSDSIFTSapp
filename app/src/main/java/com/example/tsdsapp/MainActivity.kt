@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
                 .setAnchorView(R.id.fab).show()
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navView: NavigationView = binding.navView //aca es donde se conecta con la vista de navegacion.
+        val navController = findNavController(R.id.nav_host_fragment_content_main) //esto está en Content_main
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
