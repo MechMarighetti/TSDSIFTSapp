@@ -15,8 +15,7 @@ class CalificacionesAdapter(private val materias: List<MateriaCompleta>) :
 
         class CalificacionesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val textMateria = itemView.findViewById<TextView>(R.id.tvMateria)
-            val textExamen = itemView.findViewById<TextView>(R.id.tvExamen)
-            val textNota = itemView.findViewById<TextView>(R.id.tvNota)
+            val notasLayout = itemView.findViewById<ViewGroup>(R.id.notasLayout)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalificacionesViewHolder {
@@ -29,9 +28,16 @@ class CalificacionesAdapter(private val materias: List<MateriaCompleta>) :
 
             val materia = materias[position]
             holder.textMateria.text = materia.materia
-            for (pos in 0 until materia.notas.size) {
-            holder.textExamen.text = materia.notas[pos].nombreNota
-            holder.textNota.text = materia.notas[pos].puntaje.toString()}
+
+            holder.notasLayout.removeAllViews()
+
+            for (nota in materia.notas) {
+                val textView = TextView(holder.itemView.context).apply {
+                    text = "${nota.nombreNota}: ${nota.puntaje}"
+                    textSize = 16f
+                }
+                    holder.notasLayout.addView(textView)
+            }
 
         }
 
