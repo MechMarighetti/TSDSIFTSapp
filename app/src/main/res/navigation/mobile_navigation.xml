@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_calificaciones"
-        android:name="com.example.tsdsapp.ui.gallery.GalleryFragment"
+        android:name="com.example.tsdsapp.ui.calificaciones.CalificacionesFragment"
         android:label="calificaciones"
         tools:layout="@layout/fragment_calificaciones" />
 
@@ -33,6 +33,11 @@
         android:name="com.example.tsdsapp.ui.logout.LogoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_asistencia"
+        android:name="com.example.tsdsapp.ui.asistencia.AsistenciaFragment"
+        android:label="@string/menu_asistencia"
+        tools:layout="@layout/fragment_asistencia" />
 
     <activity
         android:id="@+id/loginActivity"

@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
 
-class MateriaAdapter(private val lista: List<MateriaCompleta>) :
-    RecyclerView.Adapter<MateriaAdapter.ViewHolder>() {
+class OldMateriaAdapter(private val lista: List<MateriaCompleta>) :
+    RecyclerView.Adapter<OldMateriaAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textMateria = view.findViewById<TextView>(R.id.textMateria)

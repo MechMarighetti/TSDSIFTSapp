@@ -13,7 +13,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.ActivityMainBinding
-import com.example.tsdsapp.ui.CalificacionesFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.menu_logout, R.id.nav_calificaciones ), drawerLayout
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.menu_logout, R.id.nav_calificaciones, R.id.nav_asistencia ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

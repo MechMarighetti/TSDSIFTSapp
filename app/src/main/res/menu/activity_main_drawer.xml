@@ -17,6 +17,10 @@
             android:icon="@drawable/graduation_cap_solid"
             android:title="Calificaciones" />
         <item
+            android:id="@+id/nav_asistencia"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_asistencia" />
+        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/clipboard_user_solid"
             android:title="@string/menu_slideshow" />

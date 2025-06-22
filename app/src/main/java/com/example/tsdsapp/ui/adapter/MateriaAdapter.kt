@@ -12,24 +12,38 @@ class MateriaAdapter(private val materias: List<MateriaCompleta>) :
     RecyclerView.Adapter<MateriaAdapter.MateriaViewHolder>() {
 
     class MateriaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvMateria: TextView = itemView.findViewById(R.id.tvMateria)
-        val tvNota: TextView = itemView.findViewById(R.id.tvNota)
-        val tvAsistencia: TextView = itemView.findViewById(R.id.tvAsistencia)
-    }
+            val textMateria = itemView.findViewById<TextView>(R.id.textMateria)
+            val textNota = itemView.findViewById<TextView>(R.id.textNota)
+            val textEstado = itemView.findViewById<TextView>(R.id.textEstado)
+            val textAsistencia = itemView.findViewById<TextView>(R.id.textAsistencia)
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MateriaViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_materia, parent, false)
+            .inflate(R.layout.item_nota_materia_completa, parent, false)
         return MateriaViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MateriaViewHolder, position: Int) {
         val materia = materias[position]
-        holder.tvMateria.text = materia.materia
-        holder.tvNota.text = "${materia.nombreNota}: ${materia.puntaje}"
-        holder.tvAsistencia.text = "Asistencia: ${materia.porcentajeAsistencia}%"
+        holder.textMateria.text = materia.materia
+
+        holder.textNota.text = materia.notas[position].puntaje.toString()
+        holder.textEstado.text = estado(materia.notas[position].puntaje)
+        holder.textAsistencia.text = "Asistencia: ${materia.porcentajeAsistencia}%"
+    }
+    override fun getItemCount(): Int  {
+        return materias.size
     }
 
-    override fun getItemCount(): Int = materias.size
-}
+    private fun estado(nota: Int): String {
+        return when {
+            nota >= 7 -> "Promocionado"
+            nota == 6 -> "Zona de promoción"
+            nota in 4..5 -> "Regular"
+            else -> "Libre"
+        }
+
+
+}}
 

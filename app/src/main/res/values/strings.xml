@@ -14,5 +14,6 @@
     <string name="about_descripcion">App desarrollada por alumnos del IFTS para la asignatura Desarrollo de Aplicaciones Móviles. Buenos Aires 2025</string>
     <string name="menu_login">Inicio de sesión</string>
     <string name="menu_logout">Cerrar sesión</string>
+    <string name="menu_asistencia">Asistencia</string>
 
 </resources>
