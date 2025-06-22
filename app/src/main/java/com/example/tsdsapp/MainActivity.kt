@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tsdsapp.databinding.ActivityMainBinding
+import com.example.tsdsapp.ui.CalificacionesFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,10 +39,12 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.menu_logout ), drawerLayout
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.menu_logout, R.id.nav_calificaciones ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
