@@ -7,5 +7,8 @@
     <color name="teal_700">#2A3804</color>
     <color name="black">#030814</color>
     <color name="white">#F6F4F2</color>
-
+    <color name="Promocionado">#DAFFBE</color>
+    <color name="Libre">#FFBEBE</color>
+    <color name="Zona_Promo">#BEE6FF</color>
+    <color name="Regular">#FFF2BE</color>
 </resources>
