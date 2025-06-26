@@ -19,7 +19,7 @@ class AsistenciaAdapter(private val materias: List<MateriaCompleta>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AsistenciaViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_asistencia, parent, false)
+            .inflate(R.layout.item_asistencia2, parent, false)
         return AsistenciaViewHolder(view)
     }
 

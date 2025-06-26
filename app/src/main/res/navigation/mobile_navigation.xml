@@ -35,9 +35,9 @@
         tools:layout="@layout/fragment_logout" />
     <fragment
         android:id="@+id/nav_asistencia"
-        android:name="com.example.tsdsapp.ui.asistencia.AsistenciaFragment"
+        android:name="com.example.tsdsapp.ui.asistencia2.Asistencia2Fragment"
         android:label="@string/menu_asistencia"
-        tools:layout="@layout/fragment_asistencia" />
+        tools:layout="@layout/fragment_asistencia2" />
 
     <activity
         android:id="@+id/loginActivity"
