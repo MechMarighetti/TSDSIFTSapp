@@ -1,5 +1,6 @@
 package com.example.tsdsapp.ui.materiacardfragment
 
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,13 +32,31 @@ class MateriaCardAdapter(private val materias: List<MateriaCompleta>) :
         val materia = materias[position]
         val estadoNota = estado(materia.notas[0].puntaje)
         val context = holder.itemView.context
-
-        holder.linearHome.background = when (estadoNota) {
-            "Promocionado" -> ContextCompat.getDrawable(context, R.color.Promocionado)
-            "Zona de promoción" -> ContextCompat.getDrawable(context, R.color.Zona_Promo)
-            "Regular" -> ContextCompat.getDrawable(context, R.color.Regular)
-            else -> ContextCompat.getDrawable(context, R.color.Libre)
+        val gradientDrawable = GradientDrawable().apply {
+            cornerRadius = 32f  // Bordes redondeados (en píxeles)
+            colors = when (estadoNota) {
+                "Promocionado" -> intArrayOf(
+                    ContextCompat.getColor(holder.itemView.context, R.color.Promocionado_start),
+                    ContextCompat.getColor(holder.itemView.context, R.color.Promocionado)
+                )
+                "Zona de promoción" -> intArrayOf(
+                    ContextCompat.getColor(holder.itemView.context, R.color.Zona_Promo_start),
+                    ContextCompat.getColor(holder.itemView.context, R.color.Zona_Promo)
+                )
+                "Regular" -> intArrayOf(
+                    ContextCompat.getColor(holder.itemView.context, R.color.Regular_start),
+                    ContextCompat.getColor(holder.itemView.context, R.color.Regular)
+                )
+                else -> intArrayOf(
+                    ContextCompat.getColor(holder.itemView.context, R.color.Libre_start),
+                    ContextCompat.getColor(holder.itemView.context, R.color.Libre)
+                )
+            }
+            gradientType = GradientDrawable.LINEAR_GRADIENT
+            orientation = GradientDrawable.Orientation.TL_BR
         }
+
+        holder.linearHome.background = gradientDrawable
 
         holder.textMateria.text = materia.materia
 

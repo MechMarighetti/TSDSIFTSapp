@@ -23,7 +23,11 @@ class MateriaCardFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerAsistencia)
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = LinearLayoutManager(
+            requireContext(),
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         recyclerView.adapter = AsistenciaAdapter(MateriasAlumno.generarMockData())
 
 
