@@ -87,7 +87,7 @@ object MateriasAlumno {
                 Nota(nombreNota = "Patrones de Diseño", puntaje = 8),
                 Nota(nombreNota = "Proyecto UML", puntaje = 9)
             ),
-            porcentajeAsistencia = 96
+            porcentajeAsistencia = 23
         ),
         MateriaCompleta(
             materia = "Modelado y Diseño de Software",
@@ -96,7 +96,7 @@ object MateriasAlumno {
                 Nota(nombreNota = "Diagramas", puntaje = 7),
                 Nota(nombreNota = "Caso de Estudio", puntaje = 9)
             ),
-            porcentajeAsistencia = 84
+            porcentajeAsistencia = 45
         ),
         MateriaCompleta(
             materia = "Estadística y Probabilidad para el Desarrollo de Software",
@@ -105,7 +105,7 @@ object MateriasAlumno {
                 Nota(nombreNota = "Análisis de Datos", puntaje = 3),
                 Nota(nombreNota = "Examen Teórico", puntaje = 7)
             ),
-            porcentajeAsistencia = 85
+            porcentajeAsistencia = 14
         ),
         MateriaCompleta(
             materia = "Inglés",
@@ -132,7 +132,7 @@ object MateriasAlumno {
                 Nota(nombreNota = "App Android", puntaje = 7),
                 Nota(nombreNota = "Prototipo iOS", puntaje = 5)
             ),
-            porcentajeAsistencia = 76
+            porcentajeAsistencia = 58
         ))
     }
 }

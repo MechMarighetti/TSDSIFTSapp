@@ -1,4 +1,4 @@
-package com.example.tsdsapp.ui.asistencia2
+package com.example.tsdsapp.ui.materiacardfragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentAsistenciaBinding
 import com.example.tsdsapp.ui.adapter.AsistenciaAdapter
 
-class Asistencia2Fragment : Fragment() {
+class MateriaCardFragment : Fragment() {
     private var _binding: FragmentAsistenciaBinding? = null
     private val binding get() = _binding!!
 

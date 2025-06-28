@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
 import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentGalleryBinding
-import com.example.tsdsapp.ui.adapter.MateriaAdapter
+import com.example.tsdsapp.ui.materiacardfragment.MateriaCardAdapter
 
 class GalleryFragment : Fragment() {
 
@@ -28,7 +28,7 @@ class GalleryFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerGallery)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = MateriaAdapter(MateriasAlumno.generarMockData())
+        recyclerView.adapter = MateriaCardAdapter(MateriasAlumno.generarMockData())
 
         return view
     }

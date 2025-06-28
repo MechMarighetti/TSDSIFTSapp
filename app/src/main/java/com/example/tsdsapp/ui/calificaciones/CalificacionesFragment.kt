@@ -5,16 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
-import com.example.tsdsapp.data.MateriaCompleta
 import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentCalificacionesBinding
-import com.example.tsdsapp.databinding.FragmentGalleryBinding
 import com.example.tsdsapp.ui.adapter.CalificacionesAdapter
-import com.example.tsdsapp.ui.adapter.MateriaAdapter
 
 class CalificacionesFragment : Fragment() {
 

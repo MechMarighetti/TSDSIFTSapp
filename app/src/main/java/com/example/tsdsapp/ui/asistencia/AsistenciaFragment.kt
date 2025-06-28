@@ -11,20 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
-import com.example.tsdsapp.data.Materia
+import com.example.tsdsapp.data.MateriaCompleta
+import com.example.tsdsapp.data.MateriasAlumno
 
 class AsistenciaFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: AsistenciaAdapter
-
-    private val listaMaterias = listOf(
-        Materia("Lógica Computacional", 70),
-        Materia("Inglés", 0),
-        Materia("Análisis Matemático", 10),
-        Materia("Base de Datos", 40),
-        Materia("Programación", 90)
-    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,10 +28,10 @@ class AsistenciaFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerMaterias)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        adapter = AsistenciaAdapter(listaMaterias)
+        adapter = AsistenciaAdapter(MateriasAlumno.generarMockData())
         recyclerView.adapter = adapter
 
-        view.findViewById<Button>(R.id.btnBajo).setOnClickListener {
+     /*   view.findViewById<Button>(R.id.btnBajo).setOnClickListener {
             filtrarPorRango(0, 30)
         }
 
@@ -48,13 +41,13 @@ class AsistenciaFragment : Fragment() {
 
         view.findViewById<Button>(R.id.btnAlto).setOnClickListener {
             filtrarPorRango(71, 100)
-        }
+        }*/
 
         return view
     }
 
-    private fun filtrarPorRango(min: Int, max: Int) {
+    /*private fun filtrarPorRango(min: Int, max: Int) {
         val filtradas = listaMaterias.filter { it.porcentaje in min..max }
         adapter.filtrar(filtradas)
-    }
+    }*/
 }

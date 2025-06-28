@@ -9,15 +9,15 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
-import com.example.tsdsapp.data.Materia
+import com.example.tsdsapp.data.MateriaCompleta
 
-class AsistenciaAdapter(private var lista: List<Materia>) :
+class AsistenciaAdapter(private var lista: List<MateriaCompleta>) :
     RecyclerView.Adapter<AsistenciaAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nombre: TextView = itemView.findViewById(R.id.textNombre)
+   /*     val nombre: TextView = itemView.findViewById(R.id.textNombre)
         val porcentaje: TextView = itemView.findViewById(R.id.textPorcentaje)
-        val barra: ProgressBar = itemView.findViewById(R.id.progressBar)
+        val barra: ProgressBar = itemView.findViewById(R.id.progressBar)*/
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,7 +27,7 @@ class AsistenciaAdapter(private var lista: List<Materia>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val materia = lista[position]
+       /* val materia = lista[position]
         holder.nombre.text = materia.nombre
         holder.porcentaje.text = if (materia.porcentaje == 0)
             "Aún no se cargó la asistencia" else "${materia.porcentaje}%"
@@ -41,10 +41,11 @@ class AsistenciaAdapter(private var lista: List<Materia>) :
         holder.barra.progressDrawable.setColorFilter(color, PorterDuff.Mode.SRC_IN)
     }
 
-    override fun getItemCount(): Int = lista.size
+
 
     fun filtrar(nuevaLista: List<Materia>) {
         lista = nuevaLista
-        notifyDataSetChanged()
+        notifyDataSetChanged()*/
     }
+    override fun getItemCount(): Int = lista.size
 }

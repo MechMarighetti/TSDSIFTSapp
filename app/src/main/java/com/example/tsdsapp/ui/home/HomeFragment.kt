@@ -9,7 +9,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentHomeBinding
+import com.example.tsdsapp.ui.adapter.LinkAdapter
+import com.example.tsdsapp.ui.materiacardfragment.MateriaCardAdapter
 
 class HomeFragment : Fragment() {
 
@@ -19,6 +23,13 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private lateinit var sharedPreferences: SharedPreferences
+    data class QuickAccessItem(val title: String, val web: String)
+    val quickAccessItems = listOf(
+            QuickAccessItem("SIU Guaraní", "https://guarani-autogestionagencia.bue.edu.ar/"),
+            QuickAccessItem("Plan de Estudios","https://www.ifts18.edu.ar/carreras/desarrollo-de-software"),
+            QuickAccessItem("Certificados", "https://www.ifts18.edu.ar/alumnos/certificados"),
+            QuickAccessItem("Inscripcion a Finales", "https://www.ifts18.edu.ar/carreras/desarrollo-de-software/finalestsds")
+        )
 
 
     override fun onCreateView(
@@ -32,9 +43,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
         }
         return root
     }
@@ -47,9 +57,15 @@ class HomeFragment : Fragment() {
         val nombre = sharedPreferences.getString("nombre_usuario", "Usuario no identificado")
         val dni = sharedPreferences.getString("dni_usuario", "DNI no disponible")
 
-        // Mostrar en los TextView
-        binding.tvNombre.text = "Alumno: $nombre"
-        binding.tvDNI.text = "DNI: $dni"
+        binding.textNombre.text = nombre
+        binding.textDNI.text = dni
+
+        binding.cardRv.layoutManager = LinearLayoutManager(requireContext())
+        binding.cardRv.adapter = MateriaCardAdapter(MateriasAlumno.generarMockData())
+
+        binding.rvLinks.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvLinks.adapter = LinkAdapter(quickAccessItems)
+
     }
 
 

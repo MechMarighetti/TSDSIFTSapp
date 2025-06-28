@@ -1,4 +1,4 @@
-package com.example.tsdsapp.ui.asistencia2
+package com.example.tsdsapp.ui.materiacardfragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
