@@ -57,8 +57,7 @@ class HomeFragment : Fragment() {
         val nombre = sharedPreferences.getString("nombre_usuario", "Usuario no identificado")
         val dni = sharedPreferences.getString("dni_usuario", "DNI no disponible")
 
-        binding.textNombre.text = nombre
-        binding.textDNI.text = dni
+        binding.textNombre.text = "Alumno: ${nombre} DNI: ${dni}"
 
         binding.cardRv.layoutManager = LinearLayoutManager(requireContext())
         binding.cardRv.adapter = MateriaCardAdapter(MateriasAlumno.generarMockData())

@@ -4,7 +4,7 @@
     <corners android:radius="16dp"/>  <!-- Bordes redondeados -->
     <gradient
         android:angle="90"
-        android:startColor="@color/Promocionado"
-        android:endColor="@color/Promocionado_start"
+        android:startColor="@color/purple_500"
+        android:endColor="@color/Zona_Promo_start"
         android:type="linear"/>  <!-- Degradado base (se sobrescribirá programáticamente) -->
 </shape>

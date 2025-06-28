@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
@@ -62,10 +63,15 @@ class MateriaCardAdapter(private val materias: List<MateriaCompleta>) :
 
         holder.textViewProfesor.text = "Profe: ${materia.profesor}"
         holder.textMensaje.text = mensaje(materia.notas[0].puntaje)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context, "Tu asistencia a la materia ${materia.materia} es ${materia.porcentajeAsistencia}%",Toast.LENGTH_SHORT)
+                .show()
+        }
     }
     override fun getItemCount(): Int  {
         return materias.size
     }
+
 
     private fun mensaje(nota: Int): String {
         return when {

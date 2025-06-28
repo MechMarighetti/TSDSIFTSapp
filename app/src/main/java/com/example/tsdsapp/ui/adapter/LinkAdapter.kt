@@ -13,6 +13,7 @@ class LinkAdapter(private var quickaccess: List<HomeFragment.QuickAccessItem>)  
 
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val nombre: TextView = itemView.findViewById(R.id.texto_link)
+            val url: TextView = itemView.findViewById(R.id.URLtext)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,7 +24,8 @@ class LinkAdapter(private var quickaccess: List<HomeFragment.QuickAccessItem>)  
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
              val quick = quickaccess[position]
-             holder.nombre.text = quick.title }
+             holder.nombre.text = quick.title
+             holder.url.text = quick.web}
 
         override fun getItemCount(): Int = quickaccess.size
     }

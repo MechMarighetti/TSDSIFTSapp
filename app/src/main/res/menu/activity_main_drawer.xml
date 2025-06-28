@@ -25,6 +25,10 @@
             android:icon="@drawable/clipboard_user_solid"
             android:title="@string/menu_slideshow" />
         <item
+            android:id="@+id/nav_acercade"
+            android:icon="@drawable/code_branch_solid"
+            android:title="@string/acercade" />
+        <item
             android:id="@+id/menu_logout"
             android:icon="@drawable/right_from_bracket_solid"
             android:title="@string/menu_logout" />
