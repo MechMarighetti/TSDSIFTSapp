@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:layout_marginBottom="8dp"
-    android:elevation="2dp">
+    android:orientation="vertical"
+    android:padding="12dp">
 
     <TextView
-        android:id="@+id/tvMateria"
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Materia"
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sjdfsddsnjsdf"/>
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/tvAsistencia"
+        android:id="@+id/textPorcentaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lsdfjsafiojafijoa"/>
+        android:text="75%"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:progress="56"
+        android:max="100" />
 </LinearLayout>

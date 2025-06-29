@@ -30,15 +30,15 @@
         tools:layout="@layout/fragment_logout" />
     <fragment
         android:id="@+id/nav_asistencia"
-        android:name="com.example.tsdsapp.ui.materiacardfragment.MateriaCardFragment"
+        android:name="com.example.tsdsapp.ui.asistencia.AsistenciaFragment"
         android:label="@string/menu_asistencia"
-        tools:layout="@layout/fragment_asistencia2" />
+        tools:layout="@layout/fragment_asistencia" />
 
     <fragment
         android:id="@+id/nav_acercade"
         android:name="com.example.tsdsapp.ui.acercaDe.AcercaDeFragment"
         android:label="@string/acercade"
-        tools:layout="@layout/fragment_asistencia2" />
+        tools:layout="@layout/fragment_acercade" />
 
     <activity
         android:id="@+id/loginActivity"

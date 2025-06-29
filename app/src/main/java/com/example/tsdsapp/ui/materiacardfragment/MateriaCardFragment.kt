@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
 import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentAsistenciaBinding
-import com.example.tsdsapp.ui.adapter.AsistenciaAdapter
+import com.example.tsdsapp.ui.asistencia.AsistenciaAdapter
 
 class MateriaCardFragment : Fragment() {
     private var _binding: FragmentAsistenciaBinding? = null
@@ -19,9 +19,9 @@ class MateriaCardFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? { val view = inflater.inflate(R.layout.fragment_asistencia2, container, false)
+    ): View? { val view = inflater.inflate(R.layout.fragment_asistencia, container, false)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerAsistencia)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerMaterias)
 
         recyclerView.layoutManager = LinearLayoutManager(
             requireContext(),

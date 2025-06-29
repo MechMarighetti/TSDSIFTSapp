@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsdsapp.R
 import com.example.tsdsapp.data.MateriaCompleta
@@ -15,9 +16,9 @@ class AsistenciaAdapter(private var lista: List<MateriaCompleta>) :
     RecyclerView.Adapter<AsistenciaAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-   /*     val nombre: TextView = itemView.findViewById(R.id.textNombre)
+        val nombre: TextView = itemView.findViewById(R.id.textNombre)
         val porcentaje: TextView = itemView.findViewById(R.id.textPorcentaje)
-        val barra: ProgressBar = itemView.findViewById(R.id.progressBar)*/
+        val barra: ProgressBar = itemView.findViewById(R.id.progressBar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,25 +28,26 @@ class AsistenciaAdapter(private var lista: List<MateriaCompleta>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       /* val materia = lista[position]
-        holder.nombre.text = materia.nombre
-        holder.porcentaje.text = if (materia.porcentaje == 0)
-            "Aún no se cargó la asistencia" else "${materia.porcentaje}%"
-        holder.barra.progress = materia.porcentaje
+        val materia = lista[position]
+        holder.nombre.text = materia.materia
+        holder.porcentaje.text = if (materia.porcentajeAsistencia == 0)
+            "Aún no se cargó la asistencia" else "${materia.porcentajeAsistencia}%"
+        holder.barra.progress = materia.porcentajeAsistencia
+
+        toString()
+        val context = holder.itemView.context
+
 
         val color = when {
-            materia.porcentaje <= 30 -> Color.RED
-            materia.porcentaje <= 70 -> Color.parseColor("#FFA500")
-            else -> Color.GREEN
+            materia.porcentajeAsistencia <= 30 -> ContextCompat.getDrawable(context, R.color.Libre_start)
+            materia.porcentajeAsistencia <= 60 -> ContextCompat.getDrawable(context, R.color.Regular_start)
+            materia.porcentajeAsistencia <= 70 -> ContextCompat.getDrawable(context, R.color.Zona_Promo_start)
+            else ->  ContextCompat.getDrawable(context, R.color.Promocionado_start)
+
         }
-        holder.barra.progressDrawable.setColorFilter(color, PorterDuff.Mode.SRC_IN)
+        holder.barra.progressDrawable = color
     }
 
-
-
-    fun filtrar(nuevaLista: List<Materia>) {
-        lista = nuevaLista
-        notifyDataSetChanged()*/
-    }
     override fun getItemCount(): Int = lista.size
+
 }
