@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tsdsapp.data.MateriasAlumno
 import com.example.tsdsapp.databinding.FragmentHomeBinding
@@ -58,11 +59,12 @@ class HomeFragment : Fragment() {
         val dni = sharedPreferences.getString("dni_usuario", "DNI no disponible")
 
         binding.textNombre.text = "Alumno: ${nombre} DNI: ${dni}"
+        binding.bienvenidx.text = "Bienvenidx, ${nombre}!"
 
         binding.cardRv.layoutManager = LinearLayoutManager(requireContext())
         binding.cardRv.adapter = MateriaCardAdapter(MateriasAlumno.generarMockData())
 
-        binding.rvLinks.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvLinks.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.rvLinks.adapter = LinkAdapter(quickAccessItems)
 
     }

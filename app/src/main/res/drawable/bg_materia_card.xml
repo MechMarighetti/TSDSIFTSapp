@@ -3,8 +3,8 @@
     android:shape="rectangle">
     <corners android:radius="16dp"/>  <!-- Bordes redondeados -->
     <gradient
-        android:angle="90"
-        android:startColor="@color/purple_500"
-        android:endColor="@color/Zona_Promo_start"
+        android:angle="45"
+        android:startColor="#065F9B"
+        android:endColor="@color/teal_200"
         android:type="linear"/>  <!-- Degradado base (se sobrescribirá programáticamente) -->
 </shape>

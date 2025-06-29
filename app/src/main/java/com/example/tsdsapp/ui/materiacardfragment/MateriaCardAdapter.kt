@@ -33,6 +33,7 @@ class MateriaCardAdapter(private val materias: List<MateriaCompleta>) :
         val materia = materias[position]
         val estadoNota = estado(materia.notas[0].puntaje)
         val context = holder.itemView.context
+
         val gradientDrawable = GradientDrawable().apply {
             cornerRadius = 32f  // Bordes redondeados (en píxeles)
             colors = when (estadoNota) {
@@ -58,7 +59,9 @@ class MateriaCardAdapter(private val materias: List<MateriaCompleta>) :
         }
 
         holder.linearHome.background = gradientDrawable
-
+        holder.textMateria.setTextColor(ContextCompat.getColor(context, R.color.text_Promo))
+        holder.textViewProfesor.setTextColor(ContextCompat.getColor(context, R.color.text_Promo))
+        holder.textMensaje.setTextColor(ContextCompat.getColor(context, R.color.text_Promo))
         holder.textMateria.text = materia.materia
 
         holder.textViewProfesor.text = "Profe: ${materia.profesor}"

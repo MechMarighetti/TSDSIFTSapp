@@ -32,17 +32,15 @@ class AsistenciaAdapter(private var lista: List<MateriaCompleta>) :
         holder.nombre.text = materia.materia
         holder.porcentaje.text = if (materia.porcentajeAsistencia == 0)
             "Aún no se cargó la asistencia" else "${materia.porcentajeAsistencia}%"
-        holder.barra.progress = materia.porcentajeAsistencia
-
-        toString()
+        materia.porcentajeAsistencia.also { holder.barra.progress = it }
         val context = holder.itemView.context
 
 
         val color = when {
-            materia.porcentajeAsistencia <= 30 -> ContextCompat.getDrawable(context, R.color.Libre_start)
-            materia.porcentajeAsistencia <= 60 -> ContextCompat.getDrawable(context, R.color.Regular_start)
-            materia.porcentajeAsistencia <= 70 -> ContextCompat.getDrawable(context, R.color.Zona_Promo_start)
-            else ->  ContextCompat.getDrawable(context, R.color.Promocionado_start)
+            materia.porcentajeAsistencia <= 30 -> ContextCompat.getDrawable(context, R.color.Libre)
+            materia.porcentajeAsistencia <= 60 -> ContextCompat.getDrawable(context, R.color.Regular)
+            materia.porcentajeAsistencia <= 70 -> ContextCompat.getDrawable(context, R.color.Zona_Promo)
+            else ->  ContextCompat.getDrawable(context, R.color.Promocionado)
 
         }
         holder.barra.progressDrawable = color
