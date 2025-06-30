@@ -20,6 +20,7 @@
             android:id="@+id/nav_asistencia"
             android:icon="@drawable/clipboard_user_solid"
             android:title="@string/menu_slideshow" />
+
         <item
             android:id="@+id/nav_acercade"
             android:icon="@drawable/code_branch_solid"

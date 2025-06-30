@@ -34,6 +34,7 @@
         android:label="@string/menu_asistencia"
         tools:layout="@layout/fragment_asistencia" />
 
+
     <fragment
         android:id="@+id/nav_acercade"
         android:name="com.example.tsdsapp.ui.acercaDe.AcercaDeFragment"

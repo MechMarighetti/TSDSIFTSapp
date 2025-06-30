@@ -5,5 +5,9 @@ data class MateriaCompleta(
     val materia: String,
     val profesor: String,
     val notas: List<Nota>,
-    val porcentajeAsistencia: Int
-)
+    val porcentajeAsistencia: Int,
+    val vencimientos: String )
+
+
+
+

@@ -1,6 +1,5 @@
 package com.example.tsdsapp.ui.adapter
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,9 +14,14 @@ class CalificacionesAdapter(private val materias: List<MateriaCompleta>) :
     RecyclerView.Adapter<CalificacionesAdapter.CalificacionesViewHolder>() {
 
         class CalificacionesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
             val textMateria = itemView.findViewById<TextView>(R.id.tvMateria)
             val notasLayout = itemView.findViewById<ViewGroup>(R.id.notasLayout)
             val textProfesor = itemView.findViewById<TextView>(R.id.tvProfesor)
+            val textvencimientos = itemView.findViewById<TextView>(R.id.tvVencimientos)
+
+
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalificacionesViewHolder {
@@ -31,7 +35,7 @@ class CalificacionesAdapter(private val materias: List<MateriaCompleta>) :
             val materia = materias[position]
             holder.textMateria.text = materia.materia
             holder.textProfesor.text = materia.profesor
-
+            holder.textvencimientos.text = materia.vencimientos
             holder.notasLayout.removeAllViews()
 
             for (nota in materia.notas) {

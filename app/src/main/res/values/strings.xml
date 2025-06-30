@@ -16,5 +16,6 @@
     <string name="menu_logout">Cerrar sesión</string>
     <string name="menu_asistencia">Asistencia</string>
     <string name="label_profesor">Profesor: %1$s</string>
+    <string name="label_vencimientos">vencimientos: %1$s</string>
 
 </resources>
